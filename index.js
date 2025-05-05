@@ -1061,9 +1061,11 @@ function displaySearchResults(results) {
         // Add event listener to navigate to details page
         thumbnail.addEventListener('click', () => {
             if (item.isAnime) {
-                window.location.href = `movie_details/movie_details.html?media=tv&id=${item.id}`;
+          const movieDetailsUrl = `/movie_details.html?media=${media}&id=${id}`;
+                window.location.href = movieDetailsUrl;
             } else {
-                window.location.href = `movie_details/movie_details.html?media=${item.media_type}&id=${item.id}`;
+                const movieDetailsUrl = `/movie_details.html?media=${item.media_type}&id=${item.id}`;
+                window.location.href = movieDetailsUrl;
             }
         });
 
