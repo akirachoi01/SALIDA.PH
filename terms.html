@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="sph.jpg" />
+  <title>SALIDAPH - Stream Movies & TV Shows For Free</title>
+</head>
+<body>
+
+  <header class="header">
+   <div class="logo-pair">
+  <img src="assets/sph.jpg" alt="sph-logo" style="height: 40px;" />
+  <img src="assets/salida.png" alt="second-logo" style="height: 40px; margin-left: 10px;" />
+</div>
+    <div class="input-container">
+      <input type="text" id="searchInput" placeholder="Search movies..." />
+      <div id="searchResults"></div>
+    </div>
+    <button id="goToWatchlist" class="watchList-Btn">WatchList</button>
+  </header>
+
+  <nav class="nav-menu">
+    <ul class="nav-list">
+      <li class="nav-item active"><a href="#" data-section="all">All</a></li>
+      <li class="nav-item"><a href="#" data-section="movies">Movies</a></li>
+      <li class="nav-item"><a href="#" data-section="tv">TV Shows</a></li>
+      <li class="nav-item"><a href="#" data-section="anime">Anime</a></li>
+    </ul>
+  </nav>
+
+  <div id="banner-container">
+    <img id="banner" src="" alt="banner" />
+    <div id="details-container">
+      <h1 id="banner-title"></h1>
+      <div id="button-container">
+        <button id="play-button">
+          <img src="assets/play.png" alt="Play" style="width: 0.8rem; height: 0.8rem;" />
+          <span>Play</span>
+        </button>
+        <button id="more-info">
+          <img src="assets/info.png" alt="Info" id="info-icon" />
+          <span>More Information</span>
+        </button>
+      </div>
+    </div>
+    <div id="empty"></div>
+    <div id="banner-overlay"></div>
+    <button id="banner-prev" class="banner-nav-button">&#10094;</button>
+    <button id="banner-next" class="banner-nav-button">&#10095;</button>
+    <div class="banner-indicators" id="banner-indicators"></div>
+  </div>
+
+  <div class="sections-container" style="max-width: 1400px; margin: 0 auto; padding: 2rem 1rem;">
+    <section class="movie-section tv-section" id="netflix-originals">
+      <h1>NETFLIX ORIGINALS</h1>
+      <div class="movie-container">
+        <button class="navigation-button previous netflix-previous">&lt;</button>
+        <div class="movies-box netflix-container"></div>
+        <button class="navigation-button next netflix-next">&gt;</button>
+      </div>
+    </section>
+    <!-- Add more sections as needed -->
+  </div>
+
+  <button id="back-to-top-btn" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+<script type="module" src="/[...params]-7cd2b9354fcf5871.js"></script>
+  <script type="module" src="/touch-scroll.js"></script>
+  <script type="module" src="/navigation-fix.js"></script>
+  <script type="module" src="/index.js"></script>
+<footer class="footer">
+    <p>&copy; 2025 SALIDAPH. All rights reserved. <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a>| <a href="https://github.com/akirachoi01">Developer Info</a> </p>
+</footer>
+</body>
+</html>
