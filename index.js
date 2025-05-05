@@ -311,13 +311,15 @@ function showBannerAtIndex(index) {
             newPlayButton.addEventListener(eventType, function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.href = `movie_details/movie_details.html?media=${item.mediaType}&id=${item.id}`;
+               const movieDetailsUrl = `/movie_details.html?media=${media}&id=${id}`;
+            window.location.href = movieDetailsUrl;
             }, {passive: false});
 
             newMoreInfoButton.addEventListener(eventType, function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.href = `movie_details/movie_details.html?media=${item.mediaType}&id=${item.id}`;
+                const movieDetailsUrl = `/movie_details.html?media=${media}&id=${id}`;
+                window.location.href = movieDetailsUrl;
             }, {passive: false});
         });
 
@@ -584,7 +586,8 @@ function fetchAnime(containerClass, genreOrKeyword) {
 
                     // Add click event to navigate to details page
                     itemElement.addEventListener('click', () => {
-                        window.location.href = `movie_details/movie_details.html?media=tv&id=${anime.id}`;
+                        const movieDetailsUrl = `/movie_details.html?media=${media}&id=${id}`;
+                window.location.href = movieDetailsUrl;
                     });
 
                     // Create overlay with title and rating
