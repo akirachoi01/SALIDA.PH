@@ -1,0 +1,1098 @@
+/* Global styles for body and text elements */
+body,
+p,
+h1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Header styling */
+.header {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Logo styling */
+.logo {
+    width: 120px;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+.back-button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #7a288a;
+}
+
+/* Movie details container */
+.movie-details {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+/* Movie poster styling */
+.movie-poster {
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Desktop season selector positioning */
+.desktop-seasons-container {
+    display: none; /* Hidden by default on mobile */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Desktop server selector positioning */
+.desktop-server-container {
+    display: none; /* Hidden by default on mobile */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* iframe sizing */
+iframe {
+    width: 100%;
+    height: 450px !important;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: none; /* Remove border to make it cleaner */
+}
+
+#moviePoster {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Add margin space to the text elements */
+.movie-info {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Add margin space to the plot element */
+#plot {
+    margin-bottom: 20px;
+}
+
+/* Movie information section */
+.movie-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Movie title styling */
+.movie-info h1 {
+    color: #a209da;
+    font-size: 46px;
+}
+
+/* Plot styling */
+#plot {
+    color: white;
+    line-height: 1.4;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Movie data styling */
+.movie-data {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+/* Design class styling */
+.design {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+/* Styling for bold text elements */
+span {
+    font-weight: bold;
+    color: #a209da;
+}
+
+p {
+    font-weight: bold;
+}
+
+/* Movie poster and video container */
+.movie-poster {
+    position: relative;
+    width: 60%;
+    height: auto;
+}
+
+/* Season and episode selector styles */
+.seasons-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1.5px solid rgb(141, 22, 201);
+    position: relative;
+    box-shadow: 0 2px 12px rgba(162, 9, 218, 0.08);
+    transition: box-shadow 0.2s;
+}
+
+.seasons-container::before {
+    content: "Episodes";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-size: 12px;
+    color: #a209da;
+    background: none;
+    padding: 0;
+    letter-spacing: 0.5px;
+}
+
+.season-dropdown {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(162, 9, 218, 0.2);
+    position: relative;
+}
+
+.season-selector {
+    padding: 12px 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(32, 16, 32, 0.95);
+    border-radius: 8px 8px 0 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #a209da;
+    transition: background 0.2s;
+}
+
+.season-selector:hover {
+    background: rgba(162, 9, 218, 0.08);
+}
+
+.season-selector span {
+    color: rgb(141, 22, 201);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.season-select {
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    width: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.season-select option {
+    background-color: #222;
+    color: white;
+    padding: 8px;
+}
+
+/* Episodes list styling */
+.episodes-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #201020;
+    border-radius: 0 0 8px 8px;
+}
+
+.episode-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid rgba(162, 9, 218, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-items: flex-start;
+    gap: 16px;
+    background: transparent;
+}
+
+.episode-item:hover {
+    background-color: #3a1052;
+}
+
+.episode-item.active {
+    background-color: #41013f;
+    border-left: 3px solid #a209da;
+}
+
+.episode-thumbnail {
+    width: 160px;
+    height: 90px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.episode-number {
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.episode-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.episode-description {
+    font-size: 14px;
+    color: #ccc;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.thumbnail-container {
+    position: relative;
+}
+
+/* ---- Server dropdown & watchlist styles - unified design ---- */
+
+/* Both buttons should have identical width and appearance */
+.watchListBtn,
+.server-dropdown {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+.watchListBtn {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 20px;
+  text-align: center;
+  background: rgb(141, 22, 201);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: block; /* Ensure block display for full width */
+}
+
+.watchListBtn:hover {
+  background: black;
+  color: rgb(141, 22, 201);
+  border: 1px solid rgb(141, 22, 201);
+}
+
+.server-dropdown {
+  position: relative;
+  z-index: 20;
+}
+
+/* --- FIXED SERVER DROPDOWN HEADER --- */
+.server-dropdown-header {
+  background: transparent;
+  border: 1.5px solid rgb(141, 22, 201);
+  border-radius: 3px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(141, 22, 201);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  text-align: left;
+  gap: 10px; /* ensures spacing between content and arrow */
+}
+.server-dropdown-header::before {
+  content: "Servers";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-size: 12px;
+  color: #a209da;
+  background: none;
+  padding: 0;
+  letter-spacing: 0.5px;
+}
+
+.server-dropdown-header:hover {
+  background: black;
+  color: rgb(141, 22, 201);
+  border: 1.5px solid rgb(141, 22, 201);
+}
+
+.server-dropdown-header.active {
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+}
+
+/* Server tag styles with improved spacing */
+.selected-server {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  flex: 1; /* Take up available space */
+  min-width: 0;
+  overflow: hidden;
+}
+
+.server-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: none;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+/* Dropdown arrow styling */
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+  font-size: 16px;
+  color: rgb(141, 22, 201);
+  margin-left: 10px;
+  margin-right: 0;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.dropdown-arrow.up {
+  transform: rotate(180deg);
+}
+
+/* Keep hover consistent for server-dropdown-header */
+.server-dropdown-header:hover .dropdown-arrow {
+  color: rgb(141, 22, 201);
+}
+
+/* Ensure server dropdown content is full width */
+.server-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #201020;
+  border: 1px solid #a209da;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  z-index: 100;
+  display: none;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Include border in width */
+}
+
+.server-dropdown-content.show {
+  display: block;
+}
+
+.server-option {
+  padding: 10px 16px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(162, 9, 218, 0.2);
+  transition: background-color 0.2s;
+  background: none;
+}
+
+.server-option:last-child {
+  border-bottom: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.server-option:hover,
+.server-option.active {
+  background-color: #3a1052;
+}
+
+/* Server name and tags styling */
+.server-name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 4px;
+  color: white;
+}
+
+/* Make the server name in the dropdown header match the button color and enhance it */
+.server-dropdown-header .server-name {
+  color: rgb(141, 22, 201);
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+/* Updated tag color styles to match the site's purple branding */
+.tag-stable {
+  background-color: #755b22;
+  color: #fff;
+}
+
+.tag-4k {
+  background-color: #a209da;
+  color: #fff;
+}
+
+.tag-hd {
+  background-color: #5d4fc7;
+  color: #fff;
+}
+
+.tag-recommended {
+  background-color: #15a854;
+  color: #fff;
+}
+
+/* Customize scrollbar for the server dropdown */
+.server-dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.server-dropdown-content::-webkit-scrollbar-track {
+  background: #201020;
+  border-radius: 0 0 3px 0;
+}
+
+.server-dropdown-content::-webkit-scrollbar-thumb {
+  background: #a209da;
+  border-radius: 10px;
+}
+
+.server-dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: #8507b5;
+}
+
+/* Server selector dropdown styles - OLD VERSION (keeping for backward compatibility) */
+#server-selector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #810c7d;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 10;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #41013f;
+}
+
+.server-selector-header {
+  background-color: #540151;
+  padding: 10px;
+  border-bottom: 1px solid #41013f;
+}
+
+.server-selector-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.server-selector-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #41013f;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #41013f;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.server-selector-dropdown label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.server-selector-dropdown select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #41013f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.server-selector-content {
+  padding: 20px;
+}
+
+.server-selector-content label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.server-selector-content select {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #30012f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.server-selector label {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.server-selector-select {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  font-weight: bold;
+}
+
+.server-selector select:focus {
+  outline: none;
+  background-color: #555;
+}
+
+.server-selector button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.server-selector button:hover {
+  background-color: #3e8e41;
+}
+
+/* Position the server-selector below the video */
+.server-selector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Iframe to display video */
+#iframe {
+    width: 100%;
+    height: 450px !important;
+    display: none; /* Initially hidden until loaded */
+    margin-bottom: 20px;
+    border: none; /* Remove border to make it cleaner */
+    border-radius: 8px;
+    z-index: 2; /* Ensure it's above the poster */
+}
+
+/* Styling for the change server dropdown */
+.server-selector {
+  margin-top: 20px;
+  text-align: bottom;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px;
+}
+
+/* ----Media Queries---- */
+
+/* Media query adjustments for server dropdown and seasons container */
+@media only screen and (max-width: 560px) {
+    body {
+        transform: scale(0.95);
+        transform-origin: top center;
+    }
+
+    .movie-details {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 15px;
+    }
+
+    .movie-poster {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    #iframe,
+    iframe {
+        height: 240px !important;
+        width: 100%;
+        margin: 0 auto 20px auto;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .seasons-container {
+        margin-top: 20px !important;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 6px;
+        box-shadow: 0 1px 6px rgba(162, 9, 218, 0.10);
+    }
+
+    .episodes-list {
+        max-height: 350px;
+    }
+
+    .episode-item {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .episode-thumbnail {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
+
+    .episode-info {
+        width: 100%;
+    }
+
+    .movie-info {
+        width: 90%;
+        margin: auto;
+        gap: 15px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .movie-info h1 {
+        font-size: 32px;
+    }
+
+    .movie-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    .server-dropdown-header {
+        padding: 8px 16px;
+    }
+
+    /* Fix for movie description overflow */
+    #plot {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .desktop-server-container {
+        display: none !important;
+    }
+    .desktop-seasons-container {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:561px) and (max-width:740px) {
+    body {
+        transform: scale(0.97);
+        transform-origin: top center;
+    }
+
+    .movie-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .movie-poster {
+        width: 100%;
+        height: auto;
+    }
+
+    #iframe,
+    iframe {
+        height: 320px !important;
+        margin: 0;
+        width: 95%;
+        margin: 0 auto 20px auto;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .seasons-container {
+        margin-top: 20px !important;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(162, 9, 218, 0.10);
+    }
+
+    .movie-info {
+        width: 90%;
+        margin: auto;
+        gap: 15px;
+    }
+
+    .movie-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .episode-item {
+        flex-direction: row;
+    }
+
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .desktop-server-container {
+        display: none !important;
+    }
+    .desktop-seasons-container {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:741px) and (max-width:840px) {
+    .movie-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .movie-poster {
+        width: 100%;
+        height: auto;
+    }
+
+    #iframe,
+    iframe {
+        height: 380px !important;
+        margin: 0;
+        width: 95%;
+        margin: 0 auto 20px auto;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .seasons-container {
+        margin-top: 25px !important;
+        margin-bottom: 20px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 12px rgba(162, 9, 218, 0.10);
+    }
+
+    .movie-info {
+        width: 95%;
+        margin: auto;
+        gap: 15px;
+    }
+
+    .movie-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .desktop-server-container {
+        display: none !important;
+    }
+    .desktop-seasons-container {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:841px) and (max-width:924px) {
+    .movie-poster {
+        width: 500px;
+        height: auto;
+    }
+
+    #iframe,
+    iframe {
+        height: 350px !important;
+    }
+
+    .movie-info {
+        width: 36%;
+        gap: 15px;
+    }
+
+    .movie-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .desktop-server-container {
+        display: none !important;
+    }
+    .desktop-seasons-container {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:925px) and (max-width:1024px) {
+    .movie-poster {
+        width: 550px;
+        height: auto;
+    }
+
+    #iframe,
+    iframe {
+        height: 380px !important;
+    }
+
+    .movie-info {
+        width: 38%;
+        gap: 15px;
+    }
+
+    .movie-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* Update all media queries for consistent server dropdown styling */
+@media screen and (min-width:741px) and (max-width:1300px) {
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width:1300px) {
+    .movie-poster {
+        width: 600px;
+        height: auto;
+    }
+
+    #iframe,
+    iframe {
+        height: 420px !important;
+    }
+
+    .movie-info {
+        width: 39%;
+        gap: 15px;
+    }
+
+    .rating-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* Desktop iframe height */
+@media screen and (min-width: 1301px) {
+    #iframe,
+    iframe {
+        height: 450px !important;
+    }
+    .server-dropdown,
+    .watchListBtn {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .server-dropdown-content {
+        min-width: 0;
+        max-width: 100vw;
+    }
+}
+
+/* Desktop selector positioning and visibility */
+@media only screen and (min-width: 925px) {
+    .desktop-seasons-container {
+        display: block; /* Show on desktop */
+    }
+
+    .desktop-server-container {
+        display: block; /* Show on desktop */
+    }
+
+    /* Hide the mobile server dropdown in desktop view */
+    .movie-info > .server-dropdown {
+        display: none !important;
+    }
+
+    /* Hide seasons container in movie-info on desktop */
+    .movie-info #seasons-container {
+        display: none !important;
+    }
+
+    /* But show seasons container in desktop view if it's a TV show */
+    .desktop-seasons-container #desktop-seasons-container.show-seasons {
+        display: flex !important;
+    }
+}
+
+/* Mobile view - hide desktop elements */
+@media only screen and (max-width: 924px) {
+    .desktop-server-container,
+    .desktop-seasons-container {
+        display: none !important;
+    }
+}
