@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie_details.css">
+    <link rel="icon" href="/assests/netflix.ico">
+    <title>Movie Details</title>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <img src="/assests/netflix.png" alt="logo" class="logo">
+    </header>
+
+    <!-- Movie details section -->
+    <div class="movie-details">
+
+        <!-- Movie poster section -->
+        <div class="movie-poster" style="position: relative;">
+            <img id="moviePoster" src="https://via.placeholder.com/500x281?text=No+Image+Available" alt="Movie Poster">
+            <iframe id="iframe" frameborder="0" allowfullscreen style="display: none; width: 100%; height: 450px;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+
+            <!-- Desktop Season Selector - Only visible on desktop screens -->
+            <div class="desktop-seasons-container">
+                <!-- Season selector (visible only for TV shows) -->
+                <div id="desktop-seasons-container" class="seasons-container" style="display: none;">
+                    <div class="season-dropdown">
+                        <div class="season-selector">
+                            <span>Season</span>
+                            <select id="desktop-season-select" class="season-select">
+                                <!-- Seasons will be populated here -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="desktop-episodes-list" class="episodes-list">
+                        <!-- Episodes will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Movie information section -->
+        <div class="movie-info">
+            <h1 id="movieTitle"></h1>
+            <p id="plot">No description available</p>
+
+            <div class="movie-data">
+                <div class="design">
+                    <span>Released :</span>
+                    <p id="movieYear">Unknown</p>
+                </div>
+
+                <div class="design">
+                    <span>Language :</span>
+                    <p id="language">Unknown</p>
+                </div>
+            </div>
+
+            <div class="movie-data rating-data">
+                <div class="design">
+                    <span>Rating :</span>
+                    <p id="rating">N/A</p>
+                </div>
+                <div class="design">
+                    <span>Genre :</span>
+                    <p id="genre">Unknown</p>
+                </div>
+            </div>
+
+            <!-- watchList button section -->
+            <button class="watchListBtn">Add To WatchList</button>
+
+            <!-- Server Dropdown - Redesigned to match watchlist button -->
+            <div class="server-dropdown">
+                <div class="server-dropdown-header">
+                    <div class="selected-server">
+                        <span class="server-name">MAFUYU</span>
+                        <span class="server-tag tag-recommended">Recommended</span>
+                        <span class="server-tag tag-stable">Stable</span>
+                        <span class="server-tag tag-4k">4K</span>
+                    </div>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+                <div class="server-dropdown-content">
+                    <div class="server-option active" data-server="player.videasy.net">
+                        <span class="server-name">MAFUYU</span>
+                        <span class="server-tag tag-recommended">Recommended</span>
+                        <span class="server-tag tag-stable">Stable</span>
+                        <span class="server-tag tag-4k">4K</span>
+                    </div>
+                    <div class="server-option" data-server="vidlink.pro">
+                        <span class="server-name">MIZUKI</span>
+                        <span class="server-tag tag-stable">Stable</span>
+                        <span class="server-tag tag-4k">4K</span>
+                        <span class="server-tag tag-hd">HD</span>
+                    </div>
+                    <div class="server-option" data-server="vidsrc.cc">
+                        <span class="server-name">KANADE</span>
+                        <span class="server-tag tag-stable">Stable</span>
+                        <span class="server-tag tag-hd">HD</span>
+                    </div>
+                    <div class="server-option" data-server="movieapi.club">
+                        <span class="server-name">SAKI</span>
+                        <span class="server-tag tag-4k">4K</span>
+                    </div>
+                    <div class="server-option" data-server="vidsrc.me">
+                        <span class="server-name">OTORI</span>
+                        <span class="server-tag tag-hd">HD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Old Server selector dropdown - hidden, kept for backward compatibility -->
+            <div id="server-selector" class="server-selector-dropdown" style="display: none;">
+                <label for="server">Select Server:</label>
+                <select id="server" class="server-selector-select">
+                    <option value="player.videasy.net">MIZUKI 1080p FAST</option>
+                    <option value="vidlink.pro">VIDLINK PRO 4K FAST</option>
+                    <option value="vidsrc.cc">KANADE 4K FAST</option>
+                    <option value="movieapi.club">TSUKASA 4K FAST</option>
+                    <option value="vidsrc.me">MAFUYU 1080P FAST</option>
+                    <option value="2embed">OTORI 720P SLOW</option>
+                </select>
+                <button class="close-button" style="position: absolute; top: 10px; right: 10px;">Close</button>
+            </div>
+
+            <!-- Season selector (visible only for TV shows) -->
+            <div id="seasons-container" class="seasons-container" style="display: none;">
+                <div class="season-dropdown">
+                    <div class="season-selector">
+                        <span>Season</span>
+                        <select id="season-select" class="season-select">
+                            <!-- Seasons will be populated here -->
+                        </select>
+                    </div>
+                </div>
+
+                <div id="episodes-list" class="episodes-list">
+                    <!-- Episodes will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="movie_details.js"></script>
+</body>
+
+</html>
 
