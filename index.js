@@ -42,7 +42,7 @@ function updateBannerForSection(section) {
 
     if (section === 'all') {
         // For "All" section, we'll use trending content across all media types
-        fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${api_Key}`)
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${api_Key}`)
             .then(response => response.json())
             .then(data => {
                 const items = data.results || [];
