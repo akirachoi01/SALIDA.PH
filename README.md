@@ -2,7 +2,7 @@
 ## 🚀 Deployment
 
 Site is hosted at:  
-👉 [http://www.shantagoldsph.org/salidaph/](http://www.shantagoldsph.org/salidaph/)
+👉 [[https://akirachoi01.github.io/SALIDA.PH/#/](https://akirachoi01.github.io/SALIDA.PH/#)](http://www.shantagoldsph.org/salidaph/)
 
 To deploy changes, upload new files via FTP, SSH, or your hosting control panel.
 
