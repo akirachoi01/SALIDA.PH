@@ -28,7 +28,7 @@ const desktopSeasonSelect = document.getElementById('desktop-season-select');
 const desktopEpisodesList = document.getElementById('desktop-episodes-list');
 
 // API key for TMDB API
-const api_Key = 'e79515e88dfd7d9f6eeca36e49101ac2';
+const api_Key = 'ba3885a53bc2c4f3c4b5bdc1237e69a0';
 
 // Retrieve the TMDb ID and Media from the URL parameter
 const params = new URLSearchParams(window.location.search);
