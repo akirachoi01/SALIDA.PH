@@ -2,7 +2,7 @@
 ## 🚀 Deployment
 
 Site is hosted at:  
-👉 [[https://akirachoi01.github.io/SALIDA.PH/#/](GITHUBPAGE)]
+👉 [[https://akirachoi01.github.io/SALIDA.PH/#/]([GITHUBPAGE](https://akirachoi01.github.io/SALIDA.PH))]
 
 To deploy changes, upload new files via FTP, SSH, or your hosting control panel.
 
