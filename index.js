@@ -20,8 +20,7 @@ let currentBannerIndex = 0; // Current index in the slideshow
 let bannerInterval; // Interval for auto-rotation
 
 // TMDB API key
-const api_Key = 'ba3885a53bc2c4f3c4b5bdc1237e69a0';
-
+const _0x4e7d1a=_0x4779;(function(_0x2dbf86,_0x324e6e){const _0x2cd9f8=_0x4779,_0x400231=_0x2dbf86();while(!![]){try{const _0x513b9d=-parseInt(_0x2cd9f8(0x8c))/0x1+parseInt(_0x2cd9f8(0x90))/0x2*(parseInt(_0x2cd9f8(0x91))/0x3)+-parseInt(_0x2cd9f8(0x8b))/0x4+parseInt(_0x2cd9f8(0x8d))/0x5+parseInt(_0x2cd9f8(0x92))/0x6+-parseInt(_0x2cd9f8(0x8f))/0x7*(parseInt(_0x2cd9f8(0x94))/0x8)+-parseInt(_0x2cd9f8(0x8e))/0x9*(-parseInt(_0x2cd9f8(0x93))/0xa);if(_0x513b9d===_0x324e6e)break;else _0x400231['push'](_0x400231['shift']());}catch(_0x5648e5){_0x400231['push'](_0x400231['shift']());}}}(_0x1d3e,0x4d396));function _0x4779(_0x2d4fbb,_0x4c90bd){const _0x1d3e68=_0x1d3e();return _0x4779=function(_0x477976,_0x2a6fd1){_0x477976=_0x477976-0x8b;let _0x1818ab=_0x1d3e68[_0x477976];return _0x1818ab;},_0x4779(_0x2d4fbb,_0x4c90bd);}function _0x1d3e(){const _0x1875bd=['14whlqSx','9574NEaQxt','372DVHnpy','1320522FaAzne','10YivEIt','115816FDxEMw','ba3885a53bc2c4f3c4b5bdc1237e69a0','1654620QwKxzs','618353XMjnPU','1237750nmYPrt','2844423bQNKgc'];_0x1d3e=function(){return _0x1875bd;};return _0x1d3e();}const api_Key=_0x4e7d1a(0x95);
 // Function to update banner slideshow based on section
 function updateBannerForSection(section) {
     const banner = document.getElementById('banner');
